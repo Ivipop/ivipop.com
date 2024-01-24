@@ -1,0 +1,64 @@
+{% extends 'a1.html' %}
+{% block layout2 %}
+<script type="application/ld+json">{"@context": "https://schema.org/", "@graph": [{ "@type": "Organization","url": "https://ivipop.com/","logo":"https://ivipop.com/static/ivipop.jpg"},
+{"@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 1,"name": "ivipop","item": "{{ body.header_accueil_url }}"},{"@type": "ListItem","position": 2,"name": "{{ ui.titre }}"}]}]}</script>
+{% endblock%}
+{% block main %}
+<main>
+    <nav class="brea0">
+        <ol class="brea cp1" aria-label="fil ariane">
+            <li><a href="{{ body.header_accueil_url }}">{{ body.header_accueil_ancre }}</a></li>
+            <li class="brea1" aria-current="true">{{ ui.titre }}</li>
+        </ol>
+    </nav>
+        <article class="cp1">
+            <h1 class="mb-30">{{ ui.titre }}</h1>
+                <h2 >Information du siège social de ivipop</h2>
+                <p>Ivipop - Tonydevweb</p>
+                <p>72300 Sablé sur sarthe - France</p>
+                <p>FR12810953562</p>
+                <p>810953562 RCS Le Mans</p>
+                <p>Responsable editorial: B.tony</p>
+                <p>Pour toute demande de renseignement contactez-nous depuis l'espace contact en bas de la page ou via le lien ci dessous</p>
+                <p><span class="ta1 c2" data-ti="{{ body.cryptage_contact }}" role="button" aria-label="nous joindre">Contact</span></p>
+
+                <h3>Hébergement</h3>
+                <p>SCALEWAY - Online.net - SAS BP 438 - 75366 PARIS CEDEX 08 - FR 35 433115904 - 433 115 904 RCS Paris - FRANCE</p>
+                <p>CLOUDFLARE FRANCE SAS, 883044646 - 6 pl de la madeleine Paris - France</p>
+
+                <h3>Paiement</h3>
+                <p>STRIPE PARIS - 10 boulevard Haussmann 72009 Paris cedex 09 - France</p>
+
+                <h3>Plausible analytics</h3>
+                <p>PLAUSIBLE Insights OÜ Västriku tn 2, 50403, Tartu, Estonia - 14709274</p>
+
+                <h2>Conditions générales de ventes</h2>
+                <p>Tonydevweb société éditrice de Ivipop</p>
+
+                <h3>Image</h3>
+                <p>Aucune image ou illustations ne peut etre utilisé sans le concentement de l'équipe de Ivipop ou Tonydevweb</p>
+
+                <h3>Rétractations</h3>
+                <p>Dans le cadre d'une mise en place direct, il n'est pas possible d'avoir un délai de rétractations sur la prestation</p>
+
+                <h3>Moyens de paiement</h3>
+                <p>Ivipop accepte les paiements par carte bancaire et portefeuille électronique via la plateforme de paiement Stripe</p>
+
+                <h3>Traitement des données personnelles</h3>
+                <p>Vous pouvez consulter et supprimer à tous moment vos données</p>
+
+                <h3>Cookies </h3>
+                <p>Aucun cookies n'est mise en place sur la plateforme</p>
+
+                <h3> Protection des données</h3>
+                <p>Ivipop.com recueille des informations personnels lors de la mise en ligne d'évenement sur les clients de la plateforme conformément aux regles européenne et française en vigueur</p>
+
+                <h3>Tarification</h3>
+                <p>les prix sont affichée ttc ou tva comprise selon les normes en vigueur dans chaque pays soit 20% du prix total vendeur en France</p>
+
+                <h3>Litige</h3>
+                <p>En cas de litige pour défaut de livraisons, remboursement, de traitement d'informations, l'affaire era déposer au tribunal de commerce du Mans en Sarthe</p>
+
+                <p>Mise à jour le 23 Janvier 2024</p>
+    </article>
+</main>{% endblock %}

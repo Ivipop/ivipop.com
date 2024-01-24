@@ -1,0 +1,6 @@
+class DarkMode{constructor(){this.storageKey="theme-preference",this.theme={value:this.getColorPreference()},this.reflectPreference(),this.events()}
+events(){window.onload=()=>{this.reflectPreference(),document.querySelectorAll(".ddk").forEach(a=>{a.addEventListener("click",a=>this.onClick(a))})},window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:a})=>{this.theme.value=a?"dark":"light",this.setPreference()})}
+getColorPreference(){return localStorage.getItem(this.storageKey)?localStorage.getItem(this.storageKey):window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+setPreference(){localStorage.setItem(this.storageKey,this.theme.value),this.reflectPreference()}
+reflectPreference(){document.firstElementChild.className="",document.firstElementChild.classList.add(this.theme.value),document.querySelectorAll(".ddk").forEach(a=>{a?.setAttribute("aria-label",this.theme.value)})}
+onClick(a){a.preventDefault(),this.theme.value="light"===this.theme.value?"dark":"light",this.setPreference()}}new DarkMode;

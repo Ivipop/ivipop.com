@@ -1,0 +1,21 @@
+{% spaceless %}
+<!DOCTYPE html><html lang="{{ body.lang }}" class="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/main.js" defer></script>
+    <link rel="shortcut icon" href="https://ivipop.com/favicon.ico">
+    {% block head %}{% endblock %}
+    {% block titre %}<title>{{ ui.titre|capfirst|truncatechars:50 }} | Ivipop</title>{% endblock %}
+</head>
+<body lang="{{ body.lang }}">
+    <header class="he0">
+        <div class="cp1 he00">{{ include_menu }}</div>
+    </header>
+    {% block main %}{% endblock %}
+    <footer class="foo1">
+        <div class="cp1 foo2">&copy; 2024 ivipop.com - <a class="foo2a"  href="{{ body.footer_mentions_url }}">{{ body.footer_mentions_ancre }}</a></div>
+    </footer>
+</body>
+</html>{% endspaceless %}

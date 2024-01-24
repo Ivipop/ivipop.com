@@ -1,0 +1,27 @@
+{% extends 'a2.html' %}
+{% block main %}
+<main class="cp1">
+   
+        <form method="POST" class="aj1">
+            <h1 class="aj0">{{ ui.titre }}</h1>
+            {% if not request.GET.eve %}<a class="dsb mb-10" href="/c/c?eve=ligne">{{ ui.href_ligne_ancre }}</a>
+            {% else %}<a class="dsb mb-10" href="/c/c">{{ ui.href_physique_ancre }}</a>
+            {% endif %}
+            
+            <input name="titre" type="text" placeholder="{{ ui.placeholde_titre }}" minlength="3" maxlength="200" >
+            {% if not request.GET.eve %}<input name="adresse" type="text" placeholder="{{ ui.placeholde_adresse }}" maxlength="200" >
+            <input name="ville" type="text" placeholder="{{ ui.placeholde_ville }}" maxlength="200" >{% endif %}
+            <input name="prix" type="number" placeholder="{{ ui.placeholde_prix }}" >
+            <!--<input name="categorie" type="text" placeholder="{{ ui.placeholde_categorie }}" required minlength="3" maxlength="200">-->
+            <input name="date" type="date" placeholder="{{ ui.placeholde_date }}" required>
+            <input name="heure" type="time" placeholder="{{ ui.placeholde_heure }}" required />
+            <input name="organisateur" type="text" placeholder="{{ ui.placeholde_organisateur }}" required minlength="3" maxlength="200">
+            <input name="email" type="email" placeholder="{{ ui.placeholde_email }}" required minlength="3" maxlength="200"> 
+            <button type="submit" class="btn1">{{ ui.boutton }}</button>
+            <p class="tac fs12" >{{ ui.suggestion_option }}</p>
+        </form>
+
+        {% if request.GET.rep %}<p class="c3">{{ request.GET.rep }}</p>{% endif %}
+    
+        </div>
+</main>{% endblock %}

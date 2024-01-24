@@ -1,0 +1,20 @@
+{% extends 'a2.html' %}
+{% block main %}
+<main class="cp1">
+    <form method="Post" class="aj1">
+        <h1>{{ ui.titre }}</h1>
+        <p class="mb-10">{{ ui.prix }} {{ ui.devise }}</p>
+        <input name="annurl" type="text" placeholder="{{ ui.placeholde_url }}" required>
+        <select class="" name="annurlancre">
+                    <option value="Billetterie">Billetterie</option>
+                    <option value="En ligne">En ligne</option>
+                    <option value="Site web">Site web</option>
+        </select>
+        <h2>Facture</h2>
+        <input value="{{ ua.organisateur }}" name="organisateur" type="text" placeholder="{{ ui.placeholde_organisateur }}" required>
+        <input name="adresseville" type="text" placeholder="{{ ui.placeholde_adresse_ville }}" required>
+        <input value="{{ ua.email }}" name="email" type="text" placeholder="{{ ui.placeholde_email }}" required>
+        <button type="submit" class="btn2">{{ ui.boutton }}</button><button class="btn3 ta1" data-ta="{{ ui.passer_url }}">{{ ui.passer_url_ancre }}</button>
+    <div class="tac" >{% if request.GET.rep1 %}<p class="c2 mb-10">{{ request.GET.rep1 }}</p>{% endif %}
+    <p>{{ ui.texte }}</p></div>
+    </form></div></main>{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'a2.html' %}
+{% block titre %}<title>{{ r }} - {{ l }} | Ivipop</title>{% endblock %}
+{% block main %}
+<main class="cp1">
+    <h1 class="re0">{{ count }} {{ body.recherche_resultat_ancre }} {{ r }}</h1>
+        <div class="re1">
+            {% for up1 in up1 %}
+           <div class="re2a">{{ up1.date }} à {{ up1.ville|capfirst }}</div>
+            <div class="re2">
+                <div class="re3"><span class="re3b">{{ up1.heure }}</span></div>
+                <div class="re4">
+                    <h2 class="re4a">{{ up1.titre }}</h2>
+                    <div class="re4b"><span>{{ up1.adresse }}</span></div>
+                    <div class="re4d">{{ up1.organisateur }}</div>
+                    <div class="re4c"><span class="re4ca">{{ up1.prix }} {{ up1.devise|default:'Eur' }}</span>{% if up1.ann_url %}<a class="re4cb" href="{{ up1.ann_url }}">{{ up1.ann_ancre }}</a>{% endif %}</div>
+                    </div>
+            </div>
+            {% empty %}
+            <p class="c1">{{ body.recherche_resultat_aucun_ancre }}</p>
+            {% endfor %}
+        </div>
+</main>{% endblock %}
