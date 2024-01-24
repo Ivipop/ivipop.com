@@ -1,4 +1,4 @@
-<img alt="ivipop" src="" style="max-width: 100%;"><
+<img alt="ivipop" src="https://github.com/Ivipop/ivipop.com/blob/main/img/ivipop-github.png?raw=true" style="max-width: 100%;">
 
 <h1>Plateforme de partage d'évènements</h1>
 <h2>Ivipop.com</h2>
