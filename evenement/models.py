@@ -6,7 +6,6 @@ from django.db import models
 import datetime, uuid
 
 class EvenementModel(DjangoCassandraModel):
-    __keyspace__ = 'Cluster1'
     __table_name__ = 'evenement_model'
     __connection__ = 'cassandra'
 
