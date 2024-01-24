@@ -1,3 +1,5 @@
+<img alt="ivipop" src="" style="max-width: 100%;"><
+
 <h1>Plateforme de partage d'évènements</h1>
 <h2>Ivipop.com</h2>
 
