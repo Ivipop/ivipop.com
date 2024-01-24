@@ -39,9 +39,7 @@ def RechercheGet(request, lang=None):
             template_name = "b1-mobile.html"
     body = BodyModel.objects.get(lang=lang)
     
-    up1 = EvenementModel.objects.filter()
-    #ui = EvenementModel.objects.filter(lang=lang, Q(ia__search=r) | Q(ia__icontains=r))
-
+    up1 = EvenementModel.objects.filter(**)
     context = {'r':r,'l':l,'up1':up1,'count':up1.count(), 'body':body ,'include_menu': render_to_string(template_name, {'body': body,'r':r,'l':l })}
     return render(request, "a2-recherche.html", context)
 
