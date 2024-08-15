@@ -5,7 +5,6 @@ import datetime, uuid
 from functools import cached_property
 from django.urls.base import reverse
 
-
 class BodyModel(models.Model):
     lang = models.CharField(primary_key=True)
     pays = models.CharField(null=True, blank=True)
@@ -15,10 +14,8 @@ class BodyModel(models.Model):
     header_ajout_url = models.CharField(null=True, blank=True)
     header_recherche_evenement = models.CharField(null=True, blank=True)
     header_recherche_lieu = models.CharField(null=True, blank=True)
-
     recherche_resultat_ancre = models.CharField(null=True, blank=True)
     recherche_resultat_aucun_ancre = models.CharField(null=True, blank=True)
-
     footer_mentions_ancre = models.CharField(null=True, blank=True)
     footer_mentions_url = models.CharField(null=True, blank=True)
 
@@ -47,7 +44,6 @@ class PageImplementationModel(models.Model):
     
     class Meta:
         abstract = True
-
 
 class MentionsModel(PageImplementationModel):
     lang = models.CharField(primary_key=True)
