@@ -18,7 +18,8 @@ class BodyModel(models.Model):
     recherche_resultat_aucun_ancre = models.CharField(null=True, blank=True)
     footer_mentions_ancre = models.CharField(null=True, blank=True)
     footer_mentions_url = models.CharField(null=True, blank=True)
-
+    
+    titre = models.CharField(null=True, blank=True)
     index_titre = models.CharField(null=True, blank=True)
     index_texte = models.TextField(null=True, blank=True)
 
